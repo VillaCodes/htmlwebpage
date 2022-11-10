@@ -7,6 +7,7 @@
 body {
   font-family: sans-serif;
   color: #444;
+  position: relative;
 }
 
 .container {
@@ -26,8 +27,9 @@ padding: 20 to top and bottom, 40 to sides
   padding: 20px 40px;
   /*Try not to mix top and bottom for margin spacing. Stick to bottom*/
   margin-bottom: 60px;
-  /* Total height is not only the 80px, but that plus the padding as well!*/
-  height: 80px;
+  /* Total height is not only the 80px, but that plus the padding as well!
+  Typically, we don't have a fixed height because elements can spill over*/
+  /* height: 80px; */
 }
 
 .post-header {
@@ -164,4 +166,24 @@ a:active {
 .post-img {
   width: 100%;
   height: auto;
+}
+
+nav a:link {
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
 }
