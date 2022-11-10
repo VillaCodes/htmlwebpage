@@ -68,6 +68,7 @@ h1 {
 h2 {
   font-size: 40px;
   margin-bottom: 30px;
+  position: relative;
 }
 
 h3 {
@@ -186,4 +187,27 @@ button {
   position: absolute;
   bottom: 50px;
   right: 50px;
+}
+
+/*pseudo-elements are two colons, unlike pseudo-classes' one*/
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+h2::after {
+  /*pseudo-element content. done when we don't wish to create
+  a whole new element for some small styling*/
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #444;
+  font-size: 16px;
+  /*Typically inline element as default*/
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  /*Negative value makes it move the opposite direction*/
+  top: -10px;
+  right: -25px;
 }
