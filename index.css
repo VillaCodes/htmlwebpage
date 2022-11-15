@@ -27,7 +27,7 @@ padding: 20 to top and bottom, 40 to sides
   background-color: #f7f7f7;
   padding: 20px 40px;
   /*Try not to mix top and bottom for margin spacing. Stick to bottom*/
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
   /* Total height is not only the 80px, but that plus the padding as well!
   Typically, we don't have a fixed height because elements can spill over*/
   /* height: 80px; */
@@ -42,9 +42,9 @@ nav {
   /*text-align: center;*/
 }
 
-article {
+/* article {
   margin-bottom: 60px;
-}
+} */
 
 aside {
   border-top: 5px solid #0f98ad;
@@ -281,6 +281,7 @@ nav {
   margin-bottom: 5px;
 }
 
+/* FLEXBOX LAYOUT
 .row {
   display: flex;
   align-items: flex-start;
@@ -288,13 +289,39 @@ nav {
 }
 
 article {
-  /*Lets the element grow as much as it can in the available space*/
+  Lets the element grow as much as it can in the available space
   flex: 1;
   margin-bottom: 60px;
 }
 
 aside {
-  /*Remember, use flex-basis instead of width for resizing
-  DEFAULTS:display: flex-grow: grow 0, shrink 1, basis auto;*/
-  flex: 0 0 300px
+  Remember, use flex-basis instead of width for resizing
+  DEFAULTS:display: flex-grow: grow 0, shrink 1, basis auto;
+  flex: 0 0 300px;
+} */
+
+/* CSS GRID LAYOUT */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: start;
+}
+
+.main-header {
+  /* grid-column: 1 /span 2 */
+  grid-column: 1/-1;
+}
+
+article {
+
+}
+
+aside {
+
+}
+
+footer {
+  grid-column: 1/-1;
 }
