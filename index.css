@@ -280,3 +280,21 @@ nav {
   display: block;
   margin-bottom: 5px;
 }
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 75px;
+}
+
+article {
+  /*Lets the element grow as much as it can in the available space*/
+  flex: 1;
+  margin-bottom: 60px;
+}
+
+aside {
+  /*Remember, use flex-basis instead of width for resizing
+  DEFAULTS:display: flex-grow: grow 0, shrink 1, basis auto;*/
+  flex: 0 0 300px
+}
